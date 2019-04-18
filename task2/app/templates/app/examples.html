@@ -1,15 +1,11 @@
-{% include 'app/base.html' with is_examles=True%}
+{% include 'app/base.html' %}
 
 {% load static %}
 {% block content %}
 
-    <div class="row">
-      <div class="col s12">
+
         <h1 class="col s12">Каталог компьютеров Apple</h1>
-      {%block for%}
         {% include 'app/computer_list.html'%}
-      {%endblock%}
-      </div>
-    </div>
+
 
 {% endblock %}
