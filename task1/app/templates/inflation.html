@@ -31,7 +31,7 @@
                     {%elif forloop.last %}
                         <td bgcolor="gray">{{ col }}</td>
                     {% else %}
-                        {{col|color_filter}}
+                        <td bgcolor="{{col|color_filter}}">{{ col }}</td>
                     {% endif %}
                   {% endfor %}
               </tr>

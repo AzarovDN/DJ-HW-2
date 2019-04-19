@@ -48,5 +48,5 @@ def format_selftext(value, arg):
             finish = value.split()[-arg:]
             result = ' '.join(start) + ' ... ' + ' '.join(finish)
             return result
-    return value
+    return ''
 
