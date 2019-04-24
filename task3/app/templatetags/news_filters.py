@@ -41,7 +41,7 @@ def format_num_comments(value):
 @register.filter
 def format_selftext(value, arg):
     if value:
-        if len(value.split()) <= arg:
+        if len(value.split()) <= arg or len(value.split())/2 == arg:
             return value
         else:
             start = value.split()[:arg]
