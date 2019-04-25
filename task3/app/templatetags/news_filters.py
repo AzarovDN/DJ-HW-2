@@ -40,13 +40,12 @@ def format_num_comments(value):
 
 @register.filter
 def format_selftext(value, arg):
+    val = value.split()
     if value:
-        if len(value.split()) <= arg or len(value.split())/2 == arg:
-            return value
-        else:
-            start = value.split()[:arg]
-            finish = value.split()[-arg:]
+        if len(val)/2 > arg:
+            start = val[:arg]
+            finish = val[-arg:]
             result = ' '.join(start) + ' ... ' + ' '.join(finish)
             return result
-    return ''
+    return value
 
